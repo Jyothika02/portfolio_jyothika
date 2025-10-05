@@ -1,0 +1,637 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+
+
+
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+.full-height {
+    height: 100vh;                  /* Full viewport height */
+    overflow: hidden;                /* No vertical scroll */
+}
+
+#home .row {
+    height: 100%;                    /* Row fills full height */
+}
+
+.home-text {
+    max-width: 800px; 
+    padding-left: 260px;  
+    padding-bottom: 300px;             /* Limit text width */
+}
+
+#home img.home-image {
+    height: 90%;                     /* Slightly smaller than full height */
+    width: auto;                     /* Keep aspect ratio */
+    display: block;
+    object-fit: cover;               /* Scale nicely */
+    margin-left: auto;  
+     transform: translateY(-10%);              /* Push image to extreme right */
+}
+
+
+
+
+
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.iconbox {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand);
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand);
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgba(3, 63, 71, 0.9), rgba(3, 63, 71, 0.9)), url(../images/forest.jpeg);
+        background-size: cover;
+        background-position: center;
+       
+    }
+}
+    .navbar-brand img {
+        border: 8px solid var(--color-brand);
+         
+    }
+
+
+
+
+    /* CONTENT WRAPPER */
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+    }
+
+/* BTN */
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+
+/* about */
+
+
+#about h1{
+    color:#deff58
+}
+
+
+/* Default state */
+#aboutTab .nav-link {
+  background-color: #022a30;   /* Dark tab background */
+  color: #deff58;              /* Text color */
+  border-radius: 0.5rem;       /* Rounded corners */
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin: 0 5px;               /* Optional spacing between tabs */
+}
+
+/* Active tab */
+#aboutTab .nav-link.active {
+  background-color: #03414a;   /* Slightly darker for active state */
+  color: #deff58;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Subtle lift for active */
+}
+
+/* Hover effect */
+#aboutTab .nav-link:hover {
+  background-color: #036873;   /* Change background on hover */
+  color: #ffffff;              /* Optional: change text color */
+  transform: translateY(-3px); /* Slight lift */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4); /* Shadow for 3D effect */
+}
+
+
+
+
+
+.dark-card {
+  background-color: #033f47;   /* Dark background */
+  border: none;                /* No border */
+  border-radius: 0.75rem;      /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Subtle shadow */
+  transition: all 0.3s ease;
+}
+
+.dark-card:hover {
+  transform: translateY(-5px);           /* Lift effect */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.dark-card .card-title {
+  color: #00bcd4;  /* Info color for titles */
+}
+
+.dark-card ul li {
+  color: #ffffff;  /* White text for list items */
+}
+
+
+/* Slight offset effect for profile image */
+.profile-image img {
+  transform: translate(20px, 20px); /* Moves image 15px right and 15px down */
+  transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: translate(0, 0) scale(1.05); /* Slight zoom on hover */
+}
+
+.list-unstyled p{
+    color: #deff58;
+}
+#work {
+  margin-left: 250px; /* same as sidebar width */
+}
+#services {
+  margin-left: 250px; /* same as sidebar width */
+}
+
+
+/* FOOTER */
+.social-icons a {
+  color: var(--brand, #0d6efd);
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: #000;
+}
+
+
+/* CARD */
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+/* CONTACT */
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+/* SOCIAL ICONS */
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+}
+@media (max-width: 991px) {
+  #work, #services {
+    margin-left: 0;
+  }
+  .navbar {
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+/* ==========================================================
+   RESPONSIVE DESIGN (FOR ALL DEVICES)
+   ========================================================== */
+
+/* Extra large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .home-text {
+    padding-left: 260px;
+    padding-bottom: 250px;
+  }
+  #home img.home-image {
+    transform: translateY(-10%);
+  }
+}
+
+/* Large screens (992px to 1199px) */
+@media (max-width: 1199px) {
+  #content-wrapper {
+    padding-left: var(--sidbar-width);
+  }
+
+  .home-text {
+    padding-left: 220px;
+    padding-bottom: 200px;
+  }
+
+  #home img.home-image {
+    width: 90%;
+    margin: auto;
+    transform: none;
+  }
+
+  .navbar {
+    width: var(--sidbar-width);
+    min-height: 100vh;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+}
+
+/* Medium screens (768px to 991px) — tablets */
+@media (max-width: 991px) {
+  /* Sidebar becomes top navbar */
+  .navbar {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+  }
+
+  #content-wrapper,
+  #about,
+  #services,
+  #work,
+  #contact {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .full-height {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .home-text {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  #home img.home-image {
+    width: 70%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .profile-image img {
+    transform: none;
+    margin: auto;
+  }
+
+  .dark-card {
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  footer .row {
+    text-align: center;
+  }
+
+  footer .col-auto {
+    width: 100%;
+  }
+}
+
+/* Small screens (576px to 767px) — phones in landscape */
+@media (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  .home-text {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #home img.home-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .profile-image img {
+    width: 80%;
+  }
+
+  #aboutTab .nav-link {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  footer .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
+/* Extra small screens (max-width: 575px) — portrait phones */
+@media (max-width: 575px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-text {
+    padding: 10px;
+    text-align: center;
+  }
+
+  #home img.home-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  #contact .form-control {
+    font-size: 14px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  footer .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    margin: 0 5px;
+  }
+}
+/* ===========================
+   Contact-specific responsive overrides
+   Place this at the END of your CSS file
+   =========================== */
+
+/* Ensure #contact is not forced to viewport height on small screens */
+@media (max-width: 991px) {
+  /* Allow contact to grow and scroll on tablets/phones */
+  #contact.full-height,
+  #contact {
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    padding: 60px 16px !important;
+  }
+
+  /* Container spacing */
+  #contact .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Center and limit width of form */
+  #contact .col-lg-8 {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  /* Form layout */
+  #contact form,
+  #contact form.row {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Form groups stack nicely */
+  #contact .form-group {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  /* Make inputs fluid and remove fixed height */
+  #contact .form-control {
+    width: 100% !important;
+    box-sizing: border-box;
+    height: auto !important;
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+
+  /* Textarea height + resizing allowed */
+  #contact textarea.form-control {
+    min-height: 120px;
+    max-width: 100%;
+    resize: vertical;
+  }
+
+  /* Submit button full width */
+  #contact .d-grid,
+  #contact .btn {
+    display: block !important;
+    width: 100% !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 575px) {
+  #contact {
+    padding: 36px 12px !important;
+  }
+
+  #contact .form-control {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  #contact textarea.form-control {
+    min-height: 100px;
+  }
+
+  #contact .btn {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/* Extra safeguard: override any global fixed input height */
+#contact input.form-control,
+#contact textarea.form-control {
+  height: auto !important;
+}
+
