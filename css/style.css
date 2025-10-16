@@ -638,17 +638,8 @@ img {
 
 
 
-
-.social-icons a {
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #007bff;
-}
-
 /* Small screens: ensure text and icons center properly */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   footer p, 
   footer .social-icons {
     text-align: center !important;
@@ -656,7 +647,49 @@ img {
   }
 
   .social-icons a {
+    text-align: center !important;
     font-size: 1.5rem;
     margin-right: 12px;
   }
+
+  .designfoot{
+    text-align: center !important;
+  }
+} */
+
+
+
+
+a{
+  color: #deff58;
 }
+
+/* .text-brand {
+  color: #0d6efd;
+} */
+
+.text-brand:hover {
+  color: #66b2ff;
+}
+
+.social-icons a {
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0d6efd;
+}
+
+/* Ensures text and icons are always centered on all devices */
+.designfoot {
+  text-align: center !important;
+}
+
+/* Optional: make icons slightly bigger on small screens */
+@media (max-width: 576px) {
+  .social-icons a {
+    font-size: 1.6rem;
+    margin-right: 10px;
+  }
+}
+
