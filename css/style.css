@@ -635,3 +635,34 @@ img {
   height: auto !important;
 }
 
+
+
+
+
+/* Custom responsive styles */
+footer {
+  background-color: #033f47; /* light gray background */
+}
+
+
+
+.social-icons a {
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+/* Small devices */
+@media (max-width: 576px) {
+  footer p {
+    margin-bottom: 10px;
+  }
+  .social-icons a {
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+}
+
+
