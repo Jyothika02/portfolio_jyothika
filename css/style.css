@@ -639,13 +639,6 @@ img {
 
 
 
-/* Custom responsive styles */
-footer {
-  background-color: #033f47; /* light gray background */
-}
-
-
-
 .social-icons a {
   transition: color 0.3s ease;
 }
@@ -654,15 +647,16 @@ footer {
   color: #007bff;
 }
 
-/* Small devices */
-@media (max-width: 576px) {
-  footer p {
-    margin-bottom: 10px;
+/* Small screens: ensure text and icons center properly */
+@media (max-width: 767px) {
+  footer p, 
+  footer .social-icons {
+    text-align: center !important;
+    width: 100%;
   }
+
   .social-icons a {
     font-size: 1.5rem;
-    margin-right: 10px;
+    margin-right: 12px;
   }
 }
-
-
