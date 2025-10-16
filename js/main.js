@@ -13,3 +13,23 @@ AOS.init({
   anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
+
+
+
+
+// time------------
+
+    function updateIST() {
+      const now = new Date();
+      // Convert to IST (UTC +5:30)
+      const istOffset = 5.5 * 60 * 60 * 1000; 
+      const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
+      const istTime = new Date(utcTime + istOffset);
+      
+      const timeString = istTime.toLocaleTimeString('en-IN', { hour12: true });
+      document.getElementById('istTime').textContent = timeString;
+    }
+
+    // Update every second
+    updateIST();
+    setInterval(updateIST, 1000);
