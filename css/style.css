@@ -335,16 +335,6 @@ img {
 }
 
 
-
-
-
-
-
-/* ==========================================================
-   RESPONSIVE DESIGN (FOR ALL DEVICES)
-   ========================================================== */
-
-/* Extra large screens (1200px and up) */
 @media (min-width: 1200px) {
   .home-text {
     padding-left: 260px;
@@ -540,10 +530,7 @@ img {
     margin: 0 5px;
   }
 }
-/* ===========================
-   Contact-specific responsive overrides
-   Place this at the END of your CSS file
-   =========================== */
+
 
 /* Ensure #contact is not forced to viewport height on small screens */
 @media (max-width: 991px) {
@@ -629,33 +616,11 @@ img {
   }
 }
 
-/* Extra safeguard: override any global fixed input height */
+
 #contact input.form-control,
 #contact textarea.form-control {
   height: auto !important;
 }
-
-
-
-
-/* Small screens: ensure text and icons center properly */
-/* @media (max-width: 767px) {
-  footer p, 
-  footer .social-icons {
-    text-align: center !important;
-    width: 100%;
-  }
-
-  .social-icons a {
-    text-align: center !important;
-    font-size: 1.5rem;
-    margin-right: 12px;
-  }
-
-  .designfoot{
-    text-align: center !important;
-  }
-} */
 
 
 
@@ -710,7 +675,7 @@ a{
 
 /* XXL size for time */
 #istTime {
-  font-size: 2rem;      /* Increased from 2rem to 4rem */
+  font-size: 2rem;      
   font-weight: 700;
   color:#deff58;
 }
